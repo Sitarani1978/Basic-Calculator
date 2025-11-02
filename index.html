@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="header-controls">
+            <h1>Basic Calculator</h1>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+        <div class="calculator">
+            <div class="display">
+                <div class="memory-indicator" id="memory-indicator">M</div>
+                <div class="previous-operand" id="previous-operand"></div>
+                <div class="current-operand" id="current-operand">0</div>
+            </div>
+            <div class="buttons scientific-layout">
+                <!-- Row 1: Advanced Functions -->
+                <button class="btn btn-scientific" data-action="second">2nd</button>
+                <button class="btn btn-scientific" data-action="deg">deg</button>
+                <button class="btn btn-scientific" data-action="sin">sin</button>
+                <button class="btn btn-scientific" data-action="cos">cos</button>
+                <button class="btn btn-scientific" data-action="tan">tan</button>
+                
+                <!-- Row 2: Power & Logarithms -->
+                <button class="btn btn-function" data-action="power">x^y</button>
+                <button class="btn btn-scientific" data-action="log">lg</button>
+                <button class="btn btn-scientific" data-action="ln">ln</button>
+                <button class="btn btn-scientific" data-action="open-paren">(</button>
+                <button class="btn btn-scientific" data-action="close-paren">)</button>
+                
+                <!-- Row 3: Root & Controls -->
+                <button class="btn btn-function" data-action="square-root">√</button>
+                <button class="btn btn-clear" data-action="clear">AC</button>
+                <button class="btn btn-delete" data-action="delete">DEL</button>
+                <button class="btn btn-function" data-action="percentage">%</button>
+                <button class="btn btn-operator" data-operator="/">÷</button>
+                
+                <!-- Row 4: Factorial & Numbers -->
+                <button class="btn btn-scientific" data-action="factorial">x!</button>
+                <button class="btn btn-number" data-number="7">7</button>
+                <button class="btn btn-number" data-number="8">8</button>
+                <button class="btn btn-number" data-number="9">9</button>
+                <button class="btn btn-operator" data-operator="*">×</button>
+                
+                <!-- Row 5: Reciprocal & Numbers -->
+                <button class="btn btn-scientific" data-action="reciprocal">1/x</button>
+                <button class="btn btn-number" data-number="4">4</button>
+                <button class="btn btn-number" data-number="5">5</button>
+                <button class="btn btn-number" data-number="6">6</button>
+                <button class="btn btn-operator" data-operator="-">−</button>
+                
+                <!-- Row 6: Pi & Numbers -->
+                <button class="btn btn-scientific" data-action="pi">π</button>
+                <button class="btn btn-number" data-number="1">1</button>
+                <button class="btn btn-number" data-number="2">2</button>
+                <button class="btn btn-number" data-number="3">3</button>
+                <button class="btn btn-operator" data-operator="+">+</button>
+                
+                <!-- Row 7: Memory & Bottom -->
+                <button class="btn btn-mode" data-action="toggle-mode">⇄</button>
+                <button class="btn btn-scientific" data-action="euler">e</button>
+                <button class="btn btn-number" data-number="0">0</button>
+                <button class="btn btn-number" data-number=".">.</button>
+                <button class="btn btn-equals" data-action="equals">=</button>
+            </div>
+        </div>
+        <div class="error-message" id="error-message"></div>
+        
+        <div class="history-panel" id="history-panel">
+            <div class="history-header">
+                <h3>Calculation History</h3>
+                <div class="history-controls">
+                    <button class="btn-history-export" id="export-history" title="Export history">📥 Export</button>
+                    <button class="btn-history-clear" id="clear-history" title="Clear history">🗑️ Clear</button>
+                </div>
+            </div>
+            <div class="history-list" id="history-list">
+                <p class="history-empty">No calculations yet</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
